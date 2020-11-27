@@ -16,16 +16,29 @@ and http://www.vision.caltech.edu/Image_Datasets/Caltech256/. We prepare three s
 
 
 ### Main.py
+> Model 2: scattering-maxp for Caltech-256.
+
 
 ```python
 
   import tensorflow as tf
-  from tensorflow.keras.layers import Input, Dense,Flatten 
+  from tensorflow.keras.layers import Input, Dense, Flatten 
   from tensorflow.keras.models import Model
   
   from Scattering_maxp.keras import Scattering2D as Scattering_maxp
   
-  inputs_1 = Input(shape=(224,224))
+  inputs_2 = Input(shape=(224,224))
+  x = Scattering_maxp(J =3, L = 8)(inputs_1)
+  x = Dense(512, activation ='relu')(x)
+  x = Dense(512, activation ='relu')(x)
+  x = Dense(256, activation ='relu')(x)
+  x = Dense(256, activation ='relu')(x)
+  output_2 = Dense(257, activation = 'softmax')(x)
+  
+  model2 = Model(inputs_2, output_2)
+  model2.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+  model2.summary()
+  
 
 ```
 
