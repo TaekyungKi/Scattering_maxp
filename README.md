@@ -1,9 +1,8 @@
 ## Scattering_maxp
 
 > ### Introduction
-This is for the scattering-maxp network, which is the modified version of scattering network by S.Mallat.
-In paper [1], 
-
+> This is for the scattering-maxp network, which is the modified version of scattering network by S.Mallat.
+> In paper [1], a way of combining scattering network with max-pooling network is introduced.
 
 
 
