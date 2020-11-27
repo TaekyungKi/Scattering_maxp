@@ -1,7 +1,7 @@
 ## Scattering_maxp
 
 ### Introduction
-> This is for the scattering-maxp network, which is the modified version of scattering network by S.Mallat. All of this works are base on [4]. In paper [1], a way of combining scattering network with max-pooling network is introduced. This repository is for support of experiments in [1]. The experiments are image classifications tasks. Where the training data sets are Caltech-101 [2] and Caltech-256 [3]. 
+> This is for the scattering-maxp network, which is the modified version of scattering network by S.Mallat. In paper [1], a way of combining scattering network with max-pooling network is introduced. This repository is for support of experiments in [1]. The experiments are image classifications tasks. Where the training data sets are Caltech-101 [2] and Caltech-256 [3]. 
 
 
 ### Set-up 
@@ -15,11 +15,9 @@ and http://www.vision.caltech.edu/Image_Datasets/Caltech256/. We prepare three s
 ![experiment_model_3](https://user-images.githubusercontent.com/55676509/100437445-19e44880-30e4-11eb-9fb0-4ae145a6cbd8.png)
 
 
-
-
-
-### Experiments
-> You can find file main.py for our experiments.
+### Main
+  import tensorflow as tf
+  from tensorflow.keras.layers import 
 
 
 
@@ -31,6 +29,3 @@ in Conference on Computer Vision and Pattern Recognition Workshop, 2004.
 
 [3] G. Griffin, A. Holub, and P. Perona, “Caltech-256 object category dataset,” preprint,
 2007.
-[4] M. Andreux, T. Angles, G. Exarchakis, R. Leonarduzzi, G. Rochette, L. Thiry,
-J. Zarka, S. Mallat, J. And ́en, E. Belilovsky, et al., “Kymatio: Scattering transforms
-in Python,” Journal of Machine Learning Research, vol. 21, pp. 1–6, 2020.
