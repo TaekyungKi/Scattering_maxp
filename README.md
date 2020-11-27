@@ -1,6 +1,6 @@
 ## Scattering_maxp
 
-### Introduction
+> ### Introduction
 This is for the scattering-maxp network, which is the modified version of scattering network by S.Mallat.
 In paper [1], 
 
