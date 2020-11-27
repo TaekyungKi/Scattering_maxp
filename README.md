@@ -15,12 +15,15 @@ and http://www.vision.caltech.edu/Image_Datasets/Caltech256/. We prepare three s
 ![experiment_model_3](https://user-images.githubusercontent.com/55676509/100437445-19e44880-30e4-11eb-9fb0-4ae145a6cbd8.png)
 
 
-### Main
+### Main.py
 
 ```python
 
   import tensorflow as tf
-  from tensorflow.keras.layers import 
+  from tensorflow.keras.layers import Input, Dense,Flatten 
+  from tensorflow.keras.models import Model
+  
+  from
 
 ```
 
