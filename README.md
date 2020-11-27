@@ -23,7 +23,9 @@ and http://www.vision.caltech.edu/Image_Datasets/Caltech256/. We prepare three s
   from tensorflow.keras.layers import Input, Dense,Flatten 
   from tensorflow.keras.models import Model
   
-  from
+  from Scattering_maxp.keras import Scattering2D as Scattering_maxp
+  
+  inputs_1 = Input(shape=(224,224))
 
 ```
 
