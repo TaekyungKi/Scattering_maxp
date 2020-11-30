@@ -1,7 +1,7 @@
 ## Scattering_maxp
 
 ### Introduction
-> This is for the scattering-maxp network, which is the modified version of scattering network by S.Mallat. In paper [1], a way of combining scattering network with max-pooling network is introduced. This repository is for support of experiments in [1]. The experiments are image classifications tasks. Where the training data sets are Caltech-101 [2] and Caltech-256 [3]. 
+> This is for the scattering-maxp network, which is the modified version of scattering network by S.Mallat. In paper [1], a way of combining scattering network with max-pooling network is introduced. This repository is for support of experiments in [1]. The experiments are image classifications tasks. Where the training data sets are Caltech-101 [2] and Caltech-256 [3]. The base code is from 
 
 
 ### Set-up 
@@ -167,3 +167,5 @@ in Conference on Computer Vision and Pattern Recognition Workshop, 2004.
 
 [3] G. Griffin, A. Holub, and P. Perona, “Caltech-256 object category dataset,” preprint,
 2007.
+
+[4] Andreux, M. and Angles, T. and Exarchakis, G. and Leonarduzzi, R. and Rochette, G. and Thiry, L. and Zarka, J. and Mallat, S. and And{\'e}n, J. and Belilovsky, E. and others, "Kymatio: Scattering Transforms in {P}ython", Journal of Machine Learning Research", 21, 1 - 6, 2020.
