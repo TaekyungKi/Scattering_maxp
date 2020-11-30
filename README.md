@@ -33,6 +33,7 @@ and http://www.vision.caltech.edu/Image_Datasets/Caltech256/. We prepare three s
   
   from Scattering_maxp.keras import Scattering2D as Scattering_maxp
   
+  tf.reset_default_graph()
   inputs_2 = Input(shape=(224,224))
   x = Scattering_maxp(J =3, L = 8)(inputs_1)
   x = Dense(512, activation ='relu')(x)
@@ -82,7 +83,7 @@ and http://www.vision.caltech.edu/Image_Datasets/Caltech256/. We prepare three s
   
    with tf.device('/gpu:0'):
      model2_hist = model2.fit(X_train, Y_train, 
-     validation_data = (X_test,Y_test), callbacks =[callback], epochs=300, batch_size=256)
+                        validation_data = (X_test,Y_test), callbacks =[callback], epochs=300, batch_size=256)
 
 
 
