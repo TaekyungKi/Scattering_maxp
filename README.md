@@ -121,7 +121,7 @@ with tf.device('/gpu:0'):
   model2.summary()
  
   # data preprocessing
-  caltech_dir = "./datasets/101_ObjectCategories"
+  caltech_dir = "./datasets/256_ObjectCategories"
   classes = os.listdir(caltech_dir)
   nb_classes = len(classes)
   
