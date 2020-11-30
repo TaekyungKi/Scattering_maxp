@@ -82,7 +82,7 @@ XY_val = (X_train, X_test, Y_train, Y_test)
 
 #training session
 with tf.device('/gpu:0'):
-    scat_m_hist = scattering_m.fit(X_train, Y_train, validation_data = (X_test,Y_test), callbacks =[callback], epochs=300, batch_size=256)
+    model1_hist = model1.fit(X_train, Y_train, validation_data = (X_test,Y_test), callbacks =[callback], epochs=300, batch_size=256)
 
 ```
 
