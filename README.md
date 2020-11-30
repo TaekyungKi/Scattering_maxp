@@ -168,4 +168,4 @@ in Conference on Computer Vision and Pattern Recognition Workshop, 2004.
 [3] G. Griffin, A. Holub, and P. Perona, “Caltech-256 object category dataset,” preprint,
 2007.
 
-[4] Andreux, M. and Angles, T. and Exarchakis, G. and Leonarduzzi, R. and Rochette, G. and Thiry, L. and Zarka, J. and Mallat, S. and And{\'e}n, J. and Belilovsky, E. and others, "Kymatio: Scattering Transforms in {P}ython", Journal of Machine Learning Research", 21, 1 - 6, 2020.
+[4] M. Andreux, T. Angles, G. Exarchakis, R. Leonarduzzi, G. Rochette, L. Thiry, J. Zarka, S. Mallat, J. And{\'e}n, E. Belilovsky, et.al., "Kymatio: Scattering Transforms in {P}ython", Journal of Machine Learning Research", 21, 1 - 6, 2020.
