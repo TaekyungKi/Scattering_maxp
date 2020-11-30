@@ -15,13 +15,13 @@ and http://www.vision.caltech.edu/Image_Datasets/Caltech256/. We prepare three s
 ![experiment_model_3](https://user-images.githubusercontent.com/55676509/100437445-19e44880-30e4-11eb-9fb0-4ae145a6cbd8.png)
 
 
-### Main.py
+### Main 
 > Model 2: scattering-maxp for Caltech-256.
 
 
 ```python
 
-  import tensorflow as tf
+  import tensorflow as tf #version: 1.15.1
   from tensorflow.keras.layers import Input, Dense, Flatten 
   from tensorflow.keras.models import Model
   
