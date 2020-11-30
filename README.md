@@ -81,7 +81,8 @@ and http://www.vision.caltech.edu/Image_Datasets/Caltech256/. We prepare three s
     
   
    with tf.device('/gpu:0'):
-     model2_hist = model2.fit(X_train, Y_train, validation_data = (X_test,Y_test), callbacks =[callback], epochs=300, batch_size=256)
+     model2_hist = model2.fit(X_train, Y_train, 
+     validation_data = (X_test,Y_test), callbacks =[callback], epochs=300, batch_size=256)
 
 
 
