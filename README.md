@@ -23,7 +23,6 @@ and http://www.vision.caltech.edu/Image_Datasets/Caltech256/. We prepare three s
 ```python
 from PIL import Image
 import os, glob
-import pandas as pd
 
 from sklearn.model_selection import train_test_split
 import numpy as np
@@ -97,7 +96,6 @@ with tf.device('/gpu:0'):
 ```python
   from PIL import Image
   import os, glob
-  import pandas as pd
 
   from sklearn.model_selection import train_test_split
   import numpy as np
