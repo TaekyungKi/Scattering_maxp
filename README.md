@@ -41,7 +41,7 @@ from kymatio.keras import Scattering2D as Scattering2DM
 # mdoel construction
 tf.reset_default_graph()
 inputs_1 = Input(shape=(224, 224))
-x1 = Scattering_maxp(J =3, L = 8)(inputs_1)
+x1 = Scattering_maxp(J = 3, L = 8)(inputs_1)
 x1 = Dense(512, activation ='relu')(x1)
 x1 = Dense(512, activation ='relu')(x1)
 x1 = Dense(256, activation ='relu')(x1)
@@ -109,7 +109,7 @@ with tf.device('/gpu:0'):
   # model construction
   tf.reset_default_graph()
   inputs_2 = Input(shape=(224,224))
-  x2 = Scattering_maxp(J =3, L = 8)(inputs_2)
+  x2 = Scattering_maxp(J = 3, L = 8)(inputs_2)
   x2 = Dense(512, activation ='relu')(x2)
   x2 = Dense(512, activation ='relu')(x2)
   x2 = Dense(256, activation ='relu')(x2)
