@@ -154,12 +154,6 @@ XY_val = (X_train, X_test, Y_train, Y_test)
 with tf.device('/gpu:0'):
   model2_hist = model2.fit(X_train, Y_train, 
                         validation_data = (X_test,Y_test), callbacks =[callback], epochs=200, batch_size=256)
-
-
-
-
-
-
 ```
 
 
