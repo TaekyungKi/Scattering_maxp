@@ -20,7 +20,13 @@ and http://www.vision.caltech.edu/Image_Datasets/Caltech256/. We prepare three s
 
 
 ```python
+  
+  from PIL import Image
+  import os, glob
+  import pandas as pd
 
+  from sklearn.model_selection import train_test_split
+  import numpy as np
   import tensorflow as tf #version: 1.15.1
   from tensorflow.keras.layers import Input, Dense, Flatten 
   from tensorflow.keras.models import Model
@@ -39,29 +45,43 @@ and http://www.vision.caltech.edu/Image_Datasets/Caltech256/. We prepare three s
   model2.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
   model2.summary()
   
+  model2.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
-
-
-from PIL import Image
-import os, glob
-import pandas as pd
-
-from sklearn.model_selection import train_test_split
-import numpy as np
-import tensorflow as tf
-from kymatio.keras import Scattering2D as Scattering2DM
-from tensorflow.keras.models import Model
-from tensorflow.keras import layers
-from tensorflow.keras.layers import Input, Dense, Flatten
-
-
-from kymatio_original.keras import Scattering2D
-from kymatio.keras import Scattering2D as Scattering2DM
-
-caltech_dir = "./datasets/101_ObjectCategories"
-classes = os.listdir(caltech_dir)
-nb_classes = len(classes)
-
+  caltech_dir = "./datasets/101_ObjectCategories"
+  classes = os.listdir(caltech_dir)
+  nb_classes = len(classes)
+  
+  
+  X = []; Y = []
+  
+  image_w = 224; image_h = 224
+  
+  for idx, f in enumerate(classes):
+    label = [ 0 for i in range(nb_classes) ]
+    label[idx] = 1
+    image_dir = caltech_dir + "/" + f
+    files = glob.glob(image_dir + "/*.jpg")
+    for i, fname in enumerate(files):
+        img = Image.open(fname)
+        img = img.convert("L")
+        img = img.resize((image_w, image_h))        
+        data = np.asarray(img)
+        
+        X.append(data); Y.append(label)
+        for ang in range(-20,20,5):
+            img2= img.rotate(ang); data = np.asarray(img2)
+            X.append(data); Y.append(label)
+            img2 = img2.transpose(Image.FLIP_LEFT_RIGHT); data = np.asarray(img2)
+            X.append(data); Y.append(label)
+            
+            
+    X = np.array(X); Y = np.array(Y)
+    X_train, X_test, Y_train, Y_test = train_test_split(X, Y)
+    XY_val = (X_train, X_test, Y_train, Y_test)
+    
+  
+    with tf.device('/gpu:0'):
+      model2_hist = model2.fit(X_train, Y_train, validation_data = (X_test,Y_test), callbacks =[callback], epochs=300, batch_size=256)
 
 
 
