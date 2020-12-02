@@ -26,7 +26,7 @@ import os, glob
 
 from sklearn.model_selection import train_test_split
 import numpy as np
-import tensorflow as tf  
+import tensorflow as tf #version: 1.15.1
 
 from Scattering_maxp.keras import Scattering2D as Scattering_maxp
 
