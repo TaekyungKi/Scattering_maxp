@@ -1,7 +1,7 @@
 ## Scattering_maxp
 
 ### Introduction
-> This is for the scattering-maxp network, which is the modified version of scattering network by S.Mallat. In paper [1], a way of combining scattering network with max-pooling network is introduced. This repository is for support of experiments in [1]. The experiments are image classifications tasks. Where the training data sets are Caltech-101 [2] and Caltech-256 [3]. Special thanks to [4] for the base codes.
+> This is for the scattering-maxp network, which is the modified version of scattering network by S.Mallat. In paper [1], a way of combining scattering network with max-pooling network is introduced. This repository is for support of experiments in [1]. The experiments are image classifications tasks. The training data sets we use in the experiments are Caltech-101 [2] and Caltech-256 [3]. Special thanks to [4] for the base codes.
 
 
 ### Set-up 
