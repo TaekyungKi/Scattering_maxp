@@ -157,7 +157,7 @@ with tf.device('/gpu:0'):
 
 
 
-[1] T. Ki and Y. Hur, "Deep Scattering Transform with Max-pooling", submitted.
+[1] T. Ki and Y. Hur, "Deep Scattering Network with Max-pooling", submitted.
 
 [2] L. Fei-Fei, R. Fergus, and P. Perona, “Learning Generative Visual Models from few
 Training Examples: An Incremental Bayesian Approach Tested on 101 Object Categories,”
