@@ -94,39 +94,40 @@ with tf.device('/gpu:0'):
 
 
 ```python
-  from PIL import Image
-  import os, glob
+from PIL import Image
+import os, glob
 
-  from sklearn.model_selection import train_test_split
-  import numpy as np
-  import tensorflow as tf #version: 1.15.1
-  from tensorflow.keras.layers import Input, Dense, Flatten 
-  from tensorflow.keras.models import Model
+from sklearn.model_selection import train_test_split
+import numpy as np
+import tensorflow as tf #version: 1.15.1
+from tensorflow.keras.layers import Input, Dense, Flatten 
+from tensorflow.keras.models import Model
   
-  from Scattering_maxp.keras import Scattering2D as Scattering_maxp
+from kymatio.keras import Scattering2D as Scattering_maxp
   
   # model construction
-  tf.reset_default_graph()
-  inputs_2 = Input(shape=(224,224))
-  x2 = Scattering_maxp(J = 3, L = 8)(inputs_2)
-  x2 = Dense(512, activation ='relu')(x2)
-  x2 = Dense(512, activation ='relu')(x2)
-  x2 = Dense(256, activation ='relu')(x2)
-  x2 = Dense(256, activation ='relu')(x2)
-  output_2 = Dense(257, activation = 'softmax')(x2)
+tf.reset_default_graph()
+inputs_2 = Input(shape=(224,224))
+x2 = Scattering_maxp(J = 3, L = 8)(inputs_2)
+x2 = Dense(512, activation ='relu')(x2)
+x2 = Dense(512, activation ='relu')(x2)
+x2 = Dense(256, activation ='relu')(x2)
+x2 = Dense(256, activation ='relu')(x2)
+output_2 = Dense(257, activation = 'softmax')(x2)
   
-  model2 = Model(inputs_2, output_2)
-  model2.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
-  model2.summary()
+model2 = Model(inputs_2, output_2)
+model2.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+model2.summary()
  
   # data preprocessing
-  caltech_dir = "./datasets/256_ObjectCategories"
-  classes = os.listdir(caltech_dir)
-  nb_classes = len(classes)
+caltech_dir = "./datasets/256_ObjectCategories"
+classes = os.listdir(caltech_dir)
+nb_classes = len(classes)
   
-  X = []; Y = []
- 
-  for idx, f in enumerate(classes):
+X = []; Y = []
+
+image_w = 224; image_h = 224;
+for idx, f in enumerate(classes):
     label = [ 0 for i in range(nb_classes) ]
     label[idx] = 1
     image_dir = caltech_dir + "/" + f
@@ -160,7 +161,7 @@ def scheduler(epochs):
 callback = tf.keras.callbacks.LearningRateScheduler(scheduler)
 
 with tf.device('/gpu:0'):
-  model2_hist = model2.fit(X_train, Y_train, 
+    model2_hist = model2.fit(X_train, Y_train, 
                         validation_data = (X_test,Y_test), callbacks =[callback], epochs=200, batch_size=256)
 ```
 
