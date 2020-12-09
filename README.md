@@ -144,12 +144,18 @@ with tf.device('/gpu:0'):
             img2 = img2.transpose(Image.FLIP_LEFT_RIGHT); data = np.asarray(img2)
             X.append(data); Y.append(label)
             
-            
 X = np.array(X); Y = np.array(Y)
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y)
 XY_val = (X_train, X_test, Y_train, Y_test)
     
 # training session
+def scheduler(epochs):
+    if epochs < 50:
+        return 0.001
+    else :
+        return 0.0001
+callback = tf.keras.callbacks.LearningRateScheduler(scheduler)
+
 with tf.device('/gpu:0'):
   model2_hist = model2.fit(X_train, Y_train, 
                         validation_data = (X_test,Y_test), callbacks =[callback], epochs=200, batch_size=256)
