@@ -150,10 +150,13 @@ XY_val = (X_train, X_test, Y_train, Y_test)
     
 # training session
 def scheduler(epochs):
-    if epochs < 50:
+    if epochs < 50 :
         return 0.001
-    else :
+    elif (epochs > 51) & (epochs < 75):
         return 0.0001
+    else :
+        return 0.00001
+
 callback = tf.keras.callbacks.LearningRateScheduler(scheduler)
 
 with tf.device('/gpu:0'):
