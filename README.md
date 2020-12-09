@@ -28,7 +28,7 @@ from sklearn.model_selection import train_test_split
 import numpy as np
 import tensorflow as tf #version: 1.15.1
 
-from kymatio.keras import Scattering2D as Scattering_maxp
+from Scattering_maxp.keras import Scattering2D as Scattering_maxp
 
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Input, Dense, Flatten
@@ -100,7 +100,7 @@ import tensorflow as tf #version: 1.15.1
 from tensorflow.keras.layers import Input, Dense, Flatten 
 from tensorflow.keras.models import Model
   
-from kymatio.keras import Scattering2D as Scattering_maxp
+from Scattering_maxp.keras import Scattering2D as Scattering_maxp
   
   # model construction
 tf.reset_default_graph()
