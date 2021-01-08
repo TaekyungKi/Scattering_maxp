@@ -164,13 +164,15 @@ with tf.device('/gpu:0'):
 
 
 
-[1] T. Ki and Y. Hur, "Deep Scattering Network with Max-pooling", submitted.
+[1] T. Ki and Y. Hur, "Deep Scattering Network with Max-pooling", To appear (as a poster) in Proceedings of 2021 DCC, IEEE Computer Society Conference Publishing Services.
 
-[2] L. Fei-Fei, R. Fergus, and P. Perona, “Learning Generative Visual Models from few
+[2] T.Ki and Y.Hur, "Deep Scattering Network with Max-pooling", Arxiv pre-print https://arxiv.org/abs/2101.02321.
+
+[3] L. Fei-Fei, R. Fergus, and P. Perona, “Learning Generative Visual Models from few
 Training Examples: An Incremental Bayesian Approach Tested on 101 Object Categories,”
 in Conference on Computer Vision and Pattern Recognition Workshop, 2004.
 
-[3] G. Griffin, A. Holub, and P. Perona, “Caltech-256 Object Category Dataset,” preprint,
+[4] G. Griffin, A. Holub, and P. Perona, “Caltech-256 Object Category Dataset,” preprint,
 2007.
 
-[4] M. Andreux, T. Angles, G. Exarchakis, R. Leonarduzzi, G. Rochette, L. Thiry, J. Zarka, S. Mallat, J. And{\'e}n, E. Belilovsky, et.al., "Kymatio: Scattering Transforms in {P}ython", Journal of Machine Learning Research", 21, 1 - 6, 2020.
+[5] M. Andreux, T. Angles, G. Exarchakis, R. Leonarduzzi, G. Rochette, L. Thiry, J. Zarka, S. Mallat, J. And{\'e}n, E. Belilovsky, et.al., "Kymatio: Scattering Transforms in {P}ython", Journal of Machine Learning Research", 21, 1 - 6, 2020.
