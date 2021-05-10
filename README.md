@@ -167,7 +167,7 @@ with tf.device('/gpu:0'):
 
 
 
-[1] T. Ki and Y. Hur, "Deep Scattering Network with Max-pooling", Data Compression Conference 2021, IEEE Computer Society Conference Publishing Services.
+[1] T. Ki and Y. Hur, "Deep Scattering Network with Max-pooling", 2021 Data Compression Conference, IEEE Computer Society Conference Publishing Services.
 
 [2] T. Ki and Y. Hur, "Deep Scattering Network with Max-pooling", preprint, 2021, https://arxiv.org/abs/2101.02321.
 
