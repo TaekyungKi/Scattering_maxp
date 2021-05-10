@@ -1,6 +1,9 @@
 ## Scattering_maxp
 
 ### Introduction
+> This repository officially supports "Deep Scattering Network with Max-pooing" of [DCC 2021](https://signalprocessingsociety.org/blog/dcc-2021-2021-data-compression-conference).
+> You can see the full version of our paper at [arXiv](https://arxiv.org/abs/2101.02321).
+ 
 > This is for the scattering-maxp network, which is the modified version of scattering network by S.Mallat. In paper [1], a way of combining scattering network with max-pooling network is introduced. This repository is for support of experiments in [1]. The experiments are image classifications tasks. The training data sets we use in the experiments are Caltech-101 [2] and Caltech-256 [3]. Special thanks to [4] for the base codes.
 
 
@@ -164,7 +167,7 @@ with tf.device('/gpu:0'):
 
 
 
-[1] T. Ki and Y. Hur, "Deep Scattering Network with Max-pooling", To appear in Proceedings of 2021 DCC, IEEE Computer Society Conference Publishing Services.
+[1] T. Ki and Y. Hur, "Deep Scattering Network with Max-pooling", Data Compression Conference 2021, IEEE Computer Society Conference Publishing Services.
 
 [2] T. Ki and Y. Hur, "Deep Scattering Network with Max-pooling", preprint, 2021, https://arxiv.org/abs/2101.02321.
 
